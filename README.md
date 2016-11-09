@@ -1,1 +1,1 @@
-# payam-nz-crm
+# payam-crm
