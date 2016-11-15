@@ -19,7 +19,7 @@ function authenticateUser(){
 	$isAdmin = (strpos($_SERVER['REQUEST_URI'], 'admin') === true) ? true : false;
 	// redirect if not logged in
 	if(!is_logged_in() && $method != 'login'){
-		$redirectUrl = urlencode(base_url().ltrim($_SERVER['ORIG_PATH_INFO'],'/'));
+		$redirectUrl = urlencode(base_url().ltrim($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'],'/'));
 		redirect("login?next={$redirectUrl}");
 	}
 }
