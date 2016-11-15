@@ -1,5 +1,7 @@
 <?php 
-
+echo "<pre>";
+print_r($_SERVER);
+die;
 /* date_default_timezone_set(remote_timezone()); */
 /* remote_timezone(); */
 function is_logged_in(){
