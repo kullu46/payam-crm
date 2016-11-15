@@ -76,9 +76,9 @@ $query_builder = TRUE;
 if(isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false) {
 	$db['default'] = array(
 		'dsn'	=> '',
-		'hostname' => 'localhost',
+		'hostname' => '/cloudsql/payam-crm:us-central1:payam-crm',
 		'username' => 'root',
-		'password' => '%',
+		'password' => '',
 		'database' => 'payam-crm',
 		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
@@ -93,7 +93,6 @@ if(isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Goo
 		'compress' => FALSE,
 		'stricton' => FALSE,
 		'failover' => array(),
-		'socket' => '/cloudsql/payam-crm:us-central1:payam-crm',
 		'save_queries' => TRUE
 	);
 } else {
