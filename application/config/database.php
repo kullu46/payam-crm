@@ -76,11 +76,11 @@ $query_builder = TRUE;
 if(isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false) {
 	$db['default'] = array(
 		'dsn'	=> '',
-		'hostname' => '/cloudsql/payam-crm:payam-crm',
+		'hostname' => 'localhost',
 		'username' => 'root',
-		'password' => '',
+		'password' => '%',
 		'database' => 'payam-crm',
-		'dbdriver' => 'mysql',
+		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
 		'pconnect' => FALSE,
 		'db_debug' => (ENVIRONMENT !== 'production'),
@@ -93,6 +93,7 @@ if(isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Goo
 		'compress' => FALSE,
 		'stricton' => FALSE,
 		'failover' => array(),
+		'socket' => '/cloudsql/payam-crm:us-central1:payam-crm',
 		'save_queries' => TRUE
 	);
 } else {
@@ -102,7 +103,7 @@ if(isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Goo
 		'username' => 'root',
 		'password' => '',
 		'database' => 'payam-crm',
-		'dbdriver' => 'mysql',
+		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
 		'pconnect' => FALSE,
 		'db_debug' => (ENVIRONMENT !== 'production'),
