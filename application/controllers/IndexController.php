@@ -54,4 +54,8 @@ class IndexController extends CI_Controller {
 			$this->load->view('footer');
 		endif;
 	}
+	
+	public function displayPHPinfo(){
+		phpinfo();
+	}
 }

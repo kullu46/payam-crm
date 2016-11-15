@@ -55,4 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'indexController/login';
 $route['dashboard'] = 'indexController/dashboard';
+$route['phpinfo'] = 'indexController/displayPHPinfo';
 
