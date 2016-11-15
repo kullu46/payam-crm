@@ -76,7 +76,7 @@ $query_builder = TRUE;
 if(isset($_SERVER['SERVER_SOFTWARE']) && (strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false || strpos($_SERVER['SERVER_SOFTWARE'],'Development') !== false)) {
 	$db['default'] = array(
 		'dsn'	=> '',
-		'hostname' => '/cloudsql/payam-crm:us-central1:payam-crm',
+		'hostname' => '202.164.62.138',
 		'username' => 'root',
 		'password' => '3PxhIRnMg6G',
 		'database' => 'payam-crm',
