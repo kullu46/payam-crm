@@ -17,6 +17,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
+echo "<pre>";
+print_r($_SERVER);
+die;
 $config['base_url'] = 'http://localhost/payam-crm/';
 
 /*
