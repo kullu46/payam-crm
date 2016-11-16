@@ -8,9 +8,10 @@ class IndexController extends CI_Controller {
 		authenticateUser();
 	}
 	public function index(){
-		error_reporting(1);
-		ini_set('display_errors', 1);
-		authenticateUser(); 
+		authenticateUser();
+		$this->load->view('user/header');
+		$this->load->view('user/dashboard');
+		$this->load->view('user/footer');
 	}
 	public function dashboard(){
 		$this->load->view('user/header');
