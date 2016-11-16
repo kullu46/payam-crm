@@ -8,6 +8,8 @@ class IndexController extends CI_Controller {
 		authenticateUser();
 	}
 	public function index(){
+		error_reporting(1);
+		ini_set('display_errors', 1);
 		authenticateUser(); 
 	}
 	public function dashboard(){
@@ -53,6 +55,16 @@ class IndexController extends CI_Controller {
 			$this->load->view('login');
 			$this->load->view('footer');
 		endif;
+	}
+	
+	public function logout(){
+		$this->session->unset_userdata('userdata');
+		if(isset($_SERVER['SERVER_SOFTWARE']) && (strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false || strpos($_SERVER['SERVER_SOFTWARE'],'Development') !== false)) {
+			$redirectUrl = urlencode($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+		} else {
+			$redirectUrl = urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+		}
+		redirect("login?next={$redirectUrl}");
 	}
 	
 	public function displayPHPinfo(){

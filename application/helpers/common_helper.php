@@ -10,14 +10,15 @@ function is_logged_in(){
 
 function authenticateUser(){
 	$ci =& get_instance();
-	$lastSegment = $ci->uri->segment_array();
-	$lastSegment = end($lastSegment);
 	$controller = $ci->router->fetch_class();
 	$method = $ci->router->fetch_method();
-	$isAdmin = (strpos($_SERVER['REQUEST_URI'], 'admin') === true) ? true : false;
 	// redirect if not logged in
 	if(!is_logged_in() && $method != 'login'){
-		$redirectUrl = urlencode(base_url().ltrim($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'],'/'));
+		if(isset($_SERVER['SERVER_SOFTWARE']) && (strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false || strpos($_SERVER['SERVER_SOFTWARE'],'Development') !== false)) {
+			$redirectUrl = urlencode($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+		} else {
+			$redirectUrl = urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+		}
 		redirect("login?next={$redirectUrl}");
 	}
 }

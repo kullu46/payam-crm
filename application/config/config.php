@@ -22,7 +22,6 @@ if(isset($_SERVER['SERVER_SOFTWARE']) && (strpos($_SERVER['SERVER_SOFTWARE'],'Go
 } else {
 	$config['base_url'] = 'http://localhost/payam-crm/';
 }
-
 /*
 |--------------------------------------------------------------------------
 | Index File
