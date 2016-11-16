@@ -6,11 +6,11 @@ handlers:
 - url: .*
   script: index.php
 
-- url: /assets/js/*
+- url: /assets/js/.*
   static_dir: assets/js
 
-- url: /assets/css/*
+- url: /assets/css/.*
   static_dir: assets/css
 
-- url: /assets/images/*
+- url: /assets/images/.*
   static_dir: images
