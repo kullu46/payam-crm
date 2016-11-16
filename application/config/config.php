@@ -17,10 +17,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-echo "<pre>";
-print_r($_SERVER);
-die;
-$config['base_url'] = 'http://localhost/payam-crm/';
+if(isset($_SERVER['SERVER_SOFTWARE']) && (strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false || strpos($_SERVER['SERVER_SOFTWARE'],'Development') !== false)) {
+	$config['base_url'] = $_SERVER['HTTP_HOST'];
+} else {
+	$config['base_url'] = 'http://localhost/payam-crm/';
+}
 
 /*
 |--------------------------------------------------------------------------
