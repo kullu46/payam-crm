@@ -4,7 +4,7 @@
 	<div class="left_col scroll-view">
 		<div class="navbar nav_title" style="border: 0;">
 			<a href="index.html" class="site_title">
-				<img src="<?php echo site_url('assets/images/logo.png'); ?>" style="width: 200px;">
+				<img src="<?php echo site_url('assets/images/payam-logo-admin.png'); ?>" style="width: 200px;">
 				<span>Payam Data Recovery</span>
 			</a>
 		</div>
