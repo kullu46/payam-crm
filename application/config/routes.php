@@ -56,5 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'indexController/login';
 $route['logout'] = 'indexController/logout';
 $route['dashboard'] = 'indexController/dashboard';
+$route['index'] = 'indexController/dashboard';
 $route['phpinfo'] = 'indexController/displayPHPinfo';
+$route['jobs/(:any)'] = 'jobsController/index/$1';
 

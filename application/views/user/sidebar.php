@@ -12,7 +12,7 @@
 		<!-- menu profile quick info -->
 		<div class="profile">
 			<div class="profile_pic">
-				<img src="<?php echo !empty($user->profile_img) ? $user->profile_img : base_url().'assets/images/img.jpg'; ?>" alt="<?php echo $user->firstname.' '.$user->lastname; ?>" class="img-circle profile_img" height="60">
+				<img src="<?php echo !empty($user->profile_img) ? $user->profile_img : base_url().'assets/images/user.png'; ?>" alt="<?php echo $user->firstname.' '.$user->lastname; ?>" class="img-circle profile_img" height="60">
 			</div>
 			<div class="profile_info">
 				<span>Welcome,</span>
@@ -33,17 +33,17 @@
 						<a><i class="fa fa-tasks"></i> Jobs Tracking <span class="fa fa-chevron-down"></span></a>
 						<ul class="nav child_menu">
 							<li>
-								<a href="javascript:void(0);">Auckland</a>
+								<a href="javascript:void(0);">Auckland <span class="fa fa-chevron-down"></span></a>
 								<ul class="nav child_menu">
 									<li><a href="#">Add new</a></li>
-									<li><a href="#">All jobs</a></li>
+									<li><a href="<?php echo site_url('jobs/auckland'); ?>">All jobs</a></li>
 								</ul>
 							</li>
 							<li>
-								<a href="javascript:void(0);">Sydney</a>
+								<a href="javascript:void(0);">Sydney <span class="fa fa-chevron-down"></span></a>
 								<ul class="nav child_menu">
 									<li><a href="#">Add new</a></li>
-									<li><a href="#">All jobs</a></li>
+									<li><a href="<?php echo site_url('jobs/sydney'); ?>">All jobs</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -77,6 +77,25 @@
 								<a href="javascript:void(0);">View all partners</a>
 							</li>
 						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="menu_section">
+				<h3>Extras</h3>
+				<ul class="nav side-menu">
+					<li>
+						<a><i class="fa fa-group"></i> Users<span class="fa fa-chevron-down"></span></a>
+						<ul class="nav child_menu">
+							<li>
+								<a href="javascript:void(0);">Add new</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">View all</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-clock-o"></i> Activities</a>
 					</li>
 				</ul>
 			</div>
