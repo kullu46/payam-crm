@@ -47,7 +47,7 @@ class IndexController extends CI_Controller {
 					$this->session->set_userdata('userdata', $userdata);
 					redirect('dashboard');
 				} else {
-					$this->session->set_userdata('error', 'Email/password didn\'t matched.');
+					$this->session->set_flashdata('error', 'Email/password didn\'t matched.');
 					redirect('login?next='.urlencode(base_url()));
 				}
 			endif;
