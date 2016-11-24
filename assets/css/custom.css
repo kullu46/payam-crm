@@ -112,14 +112,14 @@
   float: left; }
 
 .img-circle.profile_img {
-  width: 70%;
+  width: 75%;
   background: #fff;
   margin-left: 15%;
   z-index: 1000;
   position: inherit;
   margin-top: 20px;
   border: 1px solid rgba(52, 73, 94, 0.44);
-  padding: 4px; }
+  padding: 2px; }
 
 .profile_info {
   padding: 25px 10px 10px;
@@ -800,9 +800,9 @@ h2 {
   width: 100%;
   display: block; }
 
-.accordion .panel:hover {
+/* .accordion .panel:hover {
   background: #F2F5F7; }
-
+ */
 .x_panel {
   position: relative;
   width: 100%;
@@ -2353,7 +2353,7 @@ a:focus {
 /* *********  timeline  **************************** */
 ul.timeline li {
   position: relative;
-  border-bottom: 1px solid #e8e8e8;
+  /* border-bottom: 1px solid #e8e8e8; */
   clear: both; }
 
 .timeline .block {
@@ -2361,7 +2361,7 @@ ul.timeline li {
   border-left: 3px solid #e8e8e8;
   overflow: visible;
   padding: 10px 15px;
-  margin-left: 105px; }
+  margin-left: 160px; }
 
 .timeline.widget {
   min-width: 0;
@@ -2374,7 +2374,7 @@ ul.timeline li {
   position: absolute;
   top: 15px;
   left: 0;
-  width: 84px; }
+  width: 145px; }
 
 .timeline .tag {
   display: block;
@@ -2416,7 +2416,7 @@ ul.timeline li {
   content: "";
   position: absolute;
   left: -23px;
-  top: 3px;
+  top: 13px;
   display: block;
   width: 14px;
   height: 14px;
@@ -4322,4 +4322,66 @@ ul.notifications {
   position: absolute;
   right: 10px;
   top: 50px;
+  z-index: 999999;
+}
+.fa-red {
+  color: #cb0019;
+}
+.fa-red-o {
+  background-color: #cb0019;
+}
+.fixed {
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: 1px solid #cccccc;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+}
+.fixed .x_title {
+  border: medium none;
+  padding: 0;
+}
+.fixed h3 {
+  font-size: 20px;
+  margin: 4px 0;
+}
+.fixed .clearfix {
+  display: none;
+}
+.fixed {
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: 1px solid #cccccc;
+  left: 0;
+  padding: 12px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+}
+.ajax-loader-full {
+  background: rgba(255, 255, 255, 0.5) none repeat scroll 0 0;
+  display: none;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+}
+.ajax-loader-full > img {
+  margin-left: 48%;
+  margin-top: 10%;
+}
+.country-list {
+  z-index: 9999 !important;
+}
+.fancybox-overlay {
+  z-index: 999999;
+}
+.fancybox-inner {
+  overflow-x: hidden !important;
+}
+.dataTables_filter input[type="search"] {
+  margin-left: 5px;
 }

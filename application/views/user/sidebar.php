@@ -12,7 +12,7 @@
 		<!-- menu profile quick info -->
 		<div class="profile">
 			<div class="profile_pic">
-				<img src="<?php echo !empty($user->profile_img) ? $user->profile_img : base_url().'assets/images/user.png'; ?>" alt="<?php echo $user->firstname.' '.$user->lastname; ?>" class="img-circle profile_img" height="60">
+				<img src="<?php echo !empty($user->profile_img) ? $user->profile_img : userPlaceholderUrl(); ?>" alt="<?php echo $user->firstname.' '.$user->lastname; ?>" class="img-circle profile_img" height="60">
 			</div>
 			<div class="profile_info">
 				<span>Welcome,</span>
@@ -35,14 +35,58 @@
 							<li>
 								<a href="javascript:void(0);">Auckland <span class="fa fa-chevron-down"></span></a>
 								<ul class="nav child_menu">
-									<li><a href="#">Add new</a></li>
+									<li>
+										<a href="javascript:void(0);">Add new <span class="fa fa-chevron-down"></span></a>
+										<ul class="nav child_menu">
+											<li>
+												<a href="<?php echo site_url('jobs/create/auckland/hdd'); ?>">HDD</a>
+											</li>
+											<li>
+												<a href="<?php echo site_url('jobs/create/auckland/raid'); ?>">RAID</a>
+											</li>
+											<li>
+												<a href="<?php echo site_url('jobs/create/auckland/ssd'); ?>">SSD</a>
+											</li>
+											<li>
+												<a href="<?php echo site_url('jobs/create/auckland/mobile'); ?>">Mobile</a>
+											</li>
+											<li>
+												<a href="<?php echo site_url('jobs/create/auckland/memory-card'); ?>">Memory Card</a>
+											</li>
+											<li>
+												<a href="<?php echo site_url('jobs/create/auckland/usb'); ?>">USB Drive</a>
+											</li>
+										</ul>
+									</li>
 									<li><a href="<?php echo site_url('jobs/auckland'); ?>">All jobs</a></li>
 								</ul>
 							</li>
 							<li>
 								<a href="javascript:void(0);">Sydney <span class="fa fa-chevron-down"></span></a>
 								<ul class="nav child_menu">
-									<li><a href="#">Add new</a></li>
+									<li>
+										<a href="javascript:void(0);">Add new <span class="fa fa-chevron-down"></span></a>
+										<ul class="nav child_menu">
+											<li>
+												<a href="<?php echo site_url('jobs/create/sydney/hdd'); ?>">HDD</a>
+											</li>
+											<li>
+												<a href="<?php echo site_url('jobs/create/sydney/raid'); ?>">RAID</a>
+											</li>
+											<li>
+												<a href="<?php echo site_url('jobs/create/sydney/ssd'); ?>">SSD</a>
+											</li>
+											<li>
+												<a href="<?php echo site_url('jobs/create/sydney/mobile'); ?>">Mobile</a>
+											</li>
+											<li>
+												<a href="<?php echo site_url('jobs/create/sydney/memory-card'); ?>">Memory Card</a>
+											</li>
+											<li>
+												<a href="<?php echo site_url('jobs/create/sydney/usb'); ?>">USB Drive</a>
+											</li>
+										</ul>
+									</li>
 									<li><a href="<?php echo site_url('jobs/sydney'); ?>">All jobs</a></li>
 								</ul>
 							</li>
